@@ -1,12 +1,9 @@
-function checkData (data) { 
-    var caseForString = 'string'; 
-    var caseForNumber = 'number'; 
-    var caseWrong = undefined; 
+function checkData (data) {  
     if (typeof data === 'string') { 
-    return caseForString; 
-    } else if (typeof data === 'number') { 
-    return caseForNumber; 
+    return 'string'; 
+    } else if (!isNaN(data)&&(typeof data === 'number')) { 
+    return 'number'; 
     } 
-    return caseWrong; 
+    return undefined; 
     } 
     module.exports = checkData;
